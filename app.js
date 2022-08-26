@@ -1,6 +1,7 @@
 console.log("hello node!");
 
 const morgan = require('morgan')
+const cors = require('cors')
 
 //utilisation d'express
 const express = require('express');
@@ -44,6 +45,7 @@ app
     // .use(express.json())
     // .use(express.urlencoded({extends:true}))
     .use(bodyParser.json())
+    .use(cors())
 
 app.get('/',(req,res)=>{
     res.send('hello express2 belaka xD')

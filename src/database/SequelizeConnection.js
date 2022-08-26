@@ -50,11 +50,11 @@ const initDB = () =>{
             console.log('la base de donne gestion_de_session a bien ete synchroniser');
             USERS.map(usr => {
                             User.create({
-                                        user_name:usr.name,
-                                        user_email:usr.email,
-                                        user_picture:usr.picture,
-                                        user_password:usr.password,
-                                        user_function:usr.function
+                                        name:usr.name,
+                                        email:usr.email,
+                                        picture:usr.picture,
+                                        password:usr.password,
+                                        function:usr.function
                                         }).then(us =>console.log(us.toJSON()))
                                           .catch(error =>console.error(error))
                             })

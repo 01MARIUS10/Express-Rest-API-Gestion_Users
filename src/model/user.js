@@ -1,35 +1,35 @@
 module.exports = (sequelize,DataTypes)=>{
     return sequelize.define(
     'user', { 
-        user_id:
+        id:
             {
                 type: DataTypes.INTEGER, 
                 allowNull: false, 
                 autoIncrement: true, 
                 primaryKey: true
             },
-        user_name:
+        name:
             { 
                 type: DataTypes.STRING, 
                 allowNull: false
             },
-        user_email:
+        email:
             {   
                 type: DataTypes.STRING,
                 unique : true , 
                 allowNull: false
             },
-        user_picture:
+        picture:
             { 
                 type: DataTypes.STRING, 
                 allowNull: false
             },
-        user_password:
+        password:
             { 
                 type: DataTypes.STRING, 
                 allowNull: false
             },
-        user_function:
+        function:
             { 
                 type: DataTypes.STRING, 
                 allowNull: false

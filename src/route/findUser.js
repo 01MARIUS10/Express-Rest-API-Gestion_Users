@@ -6,6 +6,7 @@ module.exports = (app)=>{
         .then (user=> {
             if(user){
                 let message = "l'utilisateur a bien ete trouver"
+                console.log(user)
                 res.json({message,data:user})
             }
             else{
